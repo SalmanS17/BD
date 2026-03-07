@@ -1,11 +1,11 @@
 body {
 	/*background-color: #FFDAB9;	*/
 	background-color: #000;
-	-webkit-transition:background-color linear 5s;
-	-moz-transition:background-color linear 5s;
-	-o-transition:background-color linear 5s;
-	-ms-transition:background-color linear 5s;
-	transition:background-color linear 5s;
+	-webkit-transition:background-color linear 3s;
+	-moz-transition:background-color linear 3s;
+	-o-transition:background-color linear 3s;
+	-ms-transition:background-color linear 3s;
+	transition:background-color linear 3s;
 	overflow-x:hidden;
 }
 .container {
@@ -16,11 +16,11 @@ body {
 	
 }
 .peach-after {
-	-webkit-animation:peach_alive linear 8s infinite;
-	-moz-animation:peach_alive linear 8s infinite;
-	-o-animation:peach_alive linear 8s infinite;
-	-ms-animation:peach_alive linear 8s infinite;
-	animation:peach_alive linear 8s infinite;
+	-webkit-animation:peach_alive linear 3s infinite;
+	-moz-animation:peach_alive linear 3s infinite;
+	-o-animation:peach_alive linear 3s infinite;
+	-ms-animation:peach_alive linear 3s infinite;
+	animation:peach_alive linear 3s infinite;
 }
 
 @-webkit-keyframes peach_alive {
@@ -128,11 +128,11 @@ body {
 
 .bulb-glow-yellow {
 	background-image: url('bulb_yellow.png');
-	-webkit-animation: bulb_glow_yellow linear 5s;
-	-moz-animation: bulb_glow_yellow linear 5s;
-	-o-animation: bulb_glow_yellow linear 5s;
-	-ms-animation: bulb_glow_yellow linear 5s;
-	animation: bulb_glow_yellow linear 5s;
+	-webkit-animation: bulb_glow_yellow linear 3s;
+	-moz-animation: bulb_glow_yellow linear 3s;
+	-o-animation: bulb_glow_yellow linear 3s;
+	-ms-animation: bulb_glow_yellow linear 3s;
+	animation: bulb_glow_yellow linear 3s;
 }
 
 @-webkit-keyframes bulb_glow_yellow {
@@ -203,11 +203,11 @@ body {
 
 .bulb-glow-red {
 	background-image: url('bulb_red.png');
-	-webkit-animation: bulb_glow_red linear 5s;
-	-moz-animation: bulb_glow_red linear 5s;
-	-o-animation: bulb_glow_red linear 5s;
-	-ms-animation: bulb_glow_red linear 5s;
-	animation: bulb_glow_red linear 5s;
+	-webkit-animation: bulb_glow_red linear 3s;
+	-moz-animation: bulb_glow_red linear 3s;
+	-o-animation: bulb_glow_red linear 3s;
+	-ms-animation: bulb_glow_red linear 3s;
+	animation: bulb_glow_red linear 3s;
 }
 
 @-webkit-keyframes bulb_glow_red {
@@ -277,11 +277,11 @@ body {
 }
 .bulb-glow-blue {
 	background-image: url('bulb_blue.png');
-	-webkit-animation: bulb_glow_blue linear 5s;
-	-moz-animation: bulb_glow_blue linear 5s;
-	-o-animation: bulb_glow_blue linear 5s;
-	-ms-animation: bulb_glow_blue linear 5s;
-	animation: bulb_glow_blue linear 5s;
+	-webkit-animation: bulb_glow_blue linear 3s;
+	-moz-animation: bulb_glow_blue linear 3s;
+	-o-animation: bulb_glow_blue linear 3s;
+	-ms-animation: bulb_glow_blue linear 3s;
+	animation: bulb_glow_blue linear 3s;
 }
 
 @-webkit-keyframes bulb_glow_blue {
@@ -352,11 +352,11 @@ body {
 
 .bulb-glow-green {
 	background-image: url('bulb_green.png');
-	-webkit-animation: bulb_glow_green linear 5s;
-	-moz-animation: bulb_glow_green linear 5s;
-	-o-animation: bulb_glow_green linear 5s;
-	-ms-animation: bulb_glow_green linear 5s;
-	animation: bulb_glow_green linear 5s;
+	-webkit-animation: bulb_glow_green linear 3s;
+	-moz-animation: bulb_glow_green linear 3s;
+	-o-animation: bulb_glow_green linear 3s;
+	-ms-animation: bulb_glow_green linear 3s;
+	animation: bulb_glow_green linear 3s;
 }
 
 @-webkit-keyframes bulb_glow_green {
@@ -427,11 +427,11 @@ body {
 
 .bulb-glow-pink {
 	background-image: url('bulb_pink.png');
-	-webkit-animation: bulb_glow_pink linear 5s;
-	-moz-animation: bulb_glow_pink linear 5s;
-	-o-animation: bulb_glow_pink linear 5s;
-	-ms-animation: bulb_glow_pink linear 5s;
-	animation: bulb_glow_pink linear 5s;
+	-webkit-animation: bulb_glow_pink linear 3s;
+	-moz-animation: bulb_glow_pink linear 3s;
+	-o-animation: bulb_glow_pink linear 3s;
+	-ms-animation: bulb_glow_pink linear 3s;
+	animation: bulb_glow_pink linear 3s;
 }
 
 @-webkit-keyframes bulb_glow_pink {
@@ -502,11 +502,11 @@ body {
 
 .bulb-glow-orange {
 	background-image: url('bulb_orange.png');
-	-webkit-animation: bulb_glow_orange linear 5s;
-	-moz-animation: bulb_glow_orange linear 5s;
-	-o-animation: bulb_glow_orange linear 5s;
-	-ms-animation: bulb_glow_orange linear 5s;
-	animation: bulb_glow_orange linear 5s;
+	-webkit-animation: bulb_glow_orange linear 3s;
+	-moz-animation: bulb_glow_orange linear 3s;
+	-o-animation: bulb_glow_orange linear 3s;
+	-ms-animation: bulb_glow_orange linear 3s;
+	animation: bulb_glow_orange linear 3s;
 }
 
 @-webkit-keyframes bulb_glow_orange {
@@ -978,15 +978,15 @@ audio {
 
 }
 .bannar-come {
-	-webkit-animation: bannar_come linear 6s;
+	-webkit-animation: bannar_come linear 3s;
 	-webkit-transform:translate(0px,0px);
-	-moz-animation: bannar_come linear 6s;
+	-moz-animation: bannar_come linear 3s;
 	-moz-transform:translate(0px,0px);
-	-o-animation: bannar_come linear 6s;
+	-o-animation: bannar_come linear 3s;
 	-o-transform:translate(0px,0px);
-	-ms-animation: bannar_come linear 6s;
+	-ms-animation: bannar_come linear 3s;
 	-ms-transform:translate(0px,0px);
-	animation: bannar_come linear 6s;
+	animation: bannar_come linear 3s;
 	transform:translate(0px,0px);
 }
 @-webkit-keyframes bannar_come {
@@ -1118,15 +1118,15 @@ audio {
 	background-image: url('b3.png');
 }
 .balloons-rotate-behaviour-one {
-	-webkit-animation: balloons_rotate_one linear 10s infinite;
+	-webkit-animation: balloons_rotate_one linear 3s infinite;
 	-webkit-transform: rotate(30deg);
-	-moz-animation: balloons_rotate_one linear 10s infinite;
+	-moz-animation: balloons_rotate_one linear 3s infinite;
 	-moz-transform: rotate(30deg);
-	-o-animation: balloons_rotate_one linear 10s infinite;
+	-o-animation: balloons_rotate_one linear 3s infinite;
 	-o-transform: rotate(30deg);
-	-ms-animation: balloons_rotate_one linear 10s infinite;
+	-ms-animation: balloons_rotate_one linear 3s infinite;
 	-ms-transform: rotate(30deg);
-	animation: balloons_rotate_one linear 10s infinite;
+	animation: balloons_rotate_one linear 3s infinite;
 	transform: rotate(30deg);
 }
 @-webkit-keyframes balloons_rotate_one {
@@ -1185,15 +1185,15 @@ audio {
 	}
 }
 .balloons-rotate-behaviour-two {
-	-webkit-animation: balloons_rotate_two linear 10s infinite;
+	-webkit-animation: balloons_rotate_two linear 3s infinite;
 	-webkit-transform: rotate(-20deg);
-	-moz-animation: balloons_rotate_two linear 10s infinite;
+	-moz-animation: balloons_rotate_two linear 3s infinite;
 	-moz-transform: rotate(-20deg);
-	-o-animation: balloons_rotate_two linear 10s infinite;
+	-o-animation: balloons_rotate_two linear 3s infinite;
 	-o-transform: rotate(-20deg);
-	-ms-animation: balloons_rotate_two linear 10s infinite;
+	-ms-animation: balloons_rotate_two linear 3s infinite;
 	-ms-transform: rotate(-20deg);
-	animation: balloons_rotate_two linear 10s infinite;
+	animation: balloons_rotate_two linear 3s infinite;
 	transform: rotate(-20deg);
 }
 @-webkit-keyframes balloons_rotate_two {
@@ -1271,17 +1271,40 @@ audio {
 	margin-top: 50px;
 }
 .message {
-	margin-top: 200px;
+	margin-top: 160px;
+	padding: 28px 22px;
 	display: none;
+	border-radius: 20px;
+	background: rgba(16, 18, 35, 0.55);
+	border: 1px solid rgba(255, 255, 255, 0.25);
+	box-shadow: 0 14px 36px rgba(0, 0, 0, 0.28);
 }
 .message p {
-	font-family: 'Signika', sans-serif;
-	font-size: 30px;
-	text-transform: uppercase;
-	color: #C4515C;
-	text-shadow: 2px 2px 2px #FFF;
+	font-family: 'Poppins', 'Segoe UI', sans-serif;
+	font-size: clamp(22px, 3.8vw, 36px);
+	text-transform: none;
+	color: #f8f9ff;
+	text-shadow: 0 5px 16px rgba(0, 0, 0, 0.35);
 	display: none;
-	font-weight: bold;
+	font-weight: 600;
+	letter-spacing: 0.4px;
+	line-height: 1.35;
+	margin: 10px 0;
+}
+.message p:nth-child(4n+1) {
+	color: #ff7aa2;
+}
+.message p:nth-child(4n+2) {
+	color: #7fd8ff;
+}
+.message p:nth-child(4n+3) {
+	color: #ffd071;
+}
+.message p:nth-child(4n+4) {
+	color: #9ff5b5;
+}
+.message p strong {
+	color: #fff07b;
 }
 
 .btn-primary {
