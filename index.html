@@ -1,215 +1,250 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]> <html class="ie lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>    <html class="ie lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>    <html class="ie lt-ie9"> <![endif]-->
-<!--[if gt IE 8]> <html> <![endif]-->
-<!--[if !IE]><!--><html lang="en"><!-- <![endif]-->
-<head>
-	<title>Happy Birthday</title>
-	<meta charset="UTF-8" />
-	<meta name="description" content="Happy Birthday Xola">
-	<meta name="robots" content="index, follow" />
-	<link rel="author" href="https://plus.google.com/u/1/+AyushSharma1/" /> 
-    <meta name="keywords" content="Birthday, Happy">
-    <!-- Strat of Facebook Meta -->
-    <meta property="og:type" content="E-Greeting" />
-    <meta property="og:image" content="favicon.ico" />
-    <meta property="og:description" content="Wish you a very Happy Birthday">
-    <!-- End of Facebook Meta Tags -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-status-bar-style" content="black">
-	<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="stylesheet.css">
-	<link rel="stylesheet" type="text/css" href="loading.css">
-	<link href='https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Signika:wght@400;600;700&display=swap' rel='stylesheet' type='text/css'>
-	<!-- <link href='http://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' type='text/css'> -->
-	<link rel="stylesheet/less" href="cake.less">
-	<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.1.0/less.min.js"></script>
-</head>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday, Nidhi 🎂</title>
+    <meta
+      name="description"
+      content="A heartfelt birthday wish for Nidhi — made with love."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="stylesheet.css" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  </head>
+  <body>
+    <!-- ══ LOADING ══════════════════════════════════════════ -->
+    <div class="loading-screen" id="loading-screen">
+      <div class="loading-cake">🎂</div>
+      <p class="loading-text">Preparing something special for you…</p>
+    </div>
 
-<body>
-	<div class="loading"></div>
-	<audio class="song" controls loop>
-        <source src="hbd.mp3"></source>
-	   Your browser isn't invited for super fun audio time.
+    <!-- ══ BACKGROUND IMAGE LIGHT ORBS ══════════════════════ -->
+    <div class="bg-lights" id="bg-lights">
+      <img
+        src="b1.png"
+        class="light-orb"
+        alt=""
+        data-speed="0.6"
+        data-size="220"
+      />
+      <img
+        src="b2.png"
+        class="light-orb"
+        alt=""
+        data-speed="0.9"
+        data-size="180"
+      />
+      <img
+        src="b3.png"
+        class="light-orb"
+        alt=""
+        data-speed="0.7"
+        data-size="260"
+      />
+      <img
+        src="b4.png"
+        class="light-orb"
+        alt=""
+        data-speed="0.5"
+        data-size="200"
+      />
+      <img
+        src="b5.png"
+        class="light-orb"
+        alt=""
+        data-speed="1.1"
+        data-size="150"
+      />
+      <img
+        src="b6.png"
+        class="light-orb"
+        alt=""
+        data-speed="0.8"
+        data-size="230"
+      />
+      <img
+        src="b7.png"
+        class="light-orb"
+        alt=""
+        data-speed="0.6"
+        data-size="190"
+      />
+      <img
+        src="b1.png"
+        class="light-orb"
+        alt=""
+        data-speed="1.0"
+        data-size="140"
+      />
+      <img
+        src="b3.png"
+        class="light-orb"
+        alt=""
+        data-speed="0.7"
+        data-size="170"
+      />
+      <img
+        src="b5.png"
+        class="light-orb"
+        alt=""
+        data-speed="0.9"
+        data-size="210"
+      />
+    </div>
+
+    <!-- ══ CONFETTI CANVAS ═══════════════════════════════════ -->
+    <canvas id="confetti-canvas"></canvas>
+
+    <!-- ══ AUDIO ══════════════════════════════════════════════ -->
+    <audio class="song" loop preload="auto">
+      <source src="hbd.mp3" type="audio/mpeg" />
     </audio>
-    <div class="balloons text-center" id="b1">
-    	<h2 style="color:#F2B300;">H</h2>
-    </div>
-    <div class="balloons text-center" id="b2">
-    	<h2 style="color:#0719D4;">B</h2>
-    </div>
-	<div class="balloons text-center" id="b3">
-    	<h2 style="color:#D14D39;">D</h2>
-    </div>
-	<div class="balloons text-center" id="b4">
-    	<h2 style="color:#8FAD00;">N</h2>
-    </div>
-	<div class="balloons text-center" id="b5">
-    	<h2 style="color:#8377E4;">I</h2>
-    </div>
-    <div class="balloons text-center" id="b6">
-    	<h2 style="color:#99C96A;">D</h2>
-    </div>
-    <div class="balloons text-center" id="b7">
-    	<h2 style="color:#20CFB4;">H</h2>
-    </div>
-	<div class="balloons text-center" id="b8">
-    	<h2 style="color:#cf2020;">I</h2>
-    </div>
 
-    <img src="Balloon-Border.png" width="100%" class="balloon-border">
- 
+    <!-- ══ FLOATING BALLOONS (always in DOM, JS shows them) ══ -->
+    <div class="balloons" id="b1b"><span>H</span></div>
+    <div class="balloons" id="b2b"><span>B</span></div>
+    <div class="balloons" id="b3b"><span>D</span></div>
+    <div class="balloons" id="b4b"><span>N</span></div>
+    <div class="balloons" id="b5b"><span>I</span></div>
+    <div class="balloons" id="b6b"><span>D</span></div>
+    <div class="balloons" id="b7b"><span>H</span></div>
+    <div class="balloons" id="b8b"><span>I</span></div>
 
-	<div class="container">
-		
-		<div class="row">
-			<div class="col-md-2 col-xs-2 bulb-holder">
-				<div class="bulb" id="bulb_yellow"></div>
-			</div>
-			<div class="col-md-2 col-xs-2 bulb-holder">
-				<div class="bulb" id="bulb_red"></div>
-			</div>
-			<div class="col-md-2 col-xs-2 bulb-holder">
-				<div class="bulb" id="bulb_blue"></div>
-			</div>
-			<div class="col-md-2 col-xs-2 bulb-holder">
-				<div class="bulb" id="bulb_green"></div>
-			</div>
-			<div class="col-md-2 col-xs-2 bulb-holder">
-				<div class="bulb" id="bulb_pink"></div>
-			</div>
-			<div class="col-md-2 col-xs-2 bulb-holder">
-				<div class="bulb" id="bulb_orange"></div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-12 text-center">
-				<img src="banner.png" class="bannar">
-			</div>
-		</div>
-		<div class="row cake-cover">
-			<div class="col-md-12 texr-center">
-				<div class="cake">
-				  <div class="velas">
-				    <div class="fuego"></div>
-				    <div class="fuego"></div>
-				    <div class="fuego"></div>
-				    <div class="fuego"></div>
-				    <div class="fuego"></div>
-				  </div>
-				  <div class="cobertura"></div>
-				  <div class="bizcocho"></div>
-				</div>
-			</div>
-		</div>
-		<div class="row message">
-	<div class="col-md-12">
-		<p>Today is...</p>
-		<p>as beautiful as any other day</p>
-		<p>but today feels a little more special</p>
-		<p>because it’s your day</p>
-		<p>yes, Nidhi...</p>
-		<p>another year has passed</p>
-		<p>in the blink of an eye</p>
-		<p><strong>however</strong></p>
-		<p>Do you remember..?</p>
-		<p>the very first time we talked</p>
-		<p>just a simple conversation</p>
-		<p>but somehow</p>
-		<p>I still remember it all</p>
-		<p>every little moment</p>
-		<p>every message</p>
-		<p>every small laugh</p>
-		<p>even though</p>
-		<p>we are from different countries</p>
-		<p>and have never met in person</p>
-		<p>the conversations we shared</p>
-		<p>still feel special</p>
-		<p>and I’m really glad</p>
-		<p>that our paths crossed</p>
-		<p>so today...</p>
-		<p>on your birthday</p>
-		<p>I just wanted to make</p>
-		<p>a small little surprise</p>
-		<p>something simple</p>
-		<p>but made with good wishes</p>
-		<p>just for you</p>
-		<p>Nidhi</p>
-		<p>thank you</p>
-		<p>for the conversations we had</p>
-		<p>for the friendship we share</p>
-		<p>and for the moments we talked</p>
-		<p>I truly wish</p>
-		<p>that this new year of your life</p>
-		<p>brings you happiness</p>
-		<p>success</p>
-		<p>and many beautiful moments</p>
-		<p>May your dreams grow bigger</p>
-		<p>and your worries become smaller</p>
-		<p>May life give you</p>
-		<p>endless reasons to smile</p>
-		<p>and wonderful memories</p>
-		<p>Remember</p>
-		<p>you are stronger</p>
-		<p>than you think</p>
-		<p>and brighter</p>
-		<p>than you realize</p>
-		<p>so keep shining</p>
-		<p>keep smiling</p>
-		<p>and keep being the amazing person you are</p>
-		<p>enjoy every moment</p>
-		<p>of this special day</p>
-		<p>and make it a memory</p>
-		<p>worth remembering</p>
-		<p>lastly...</p>
-		<p>I'd like to say once more</p>
-		<p>a very happy birthday</p>
-		<p>Nidhi 🎉</p>
-	</div>
-</div>
-		<div class="navbar navbar-fixed-bottom">
-			<div class="row">
-				<div class="col-md-6 text-center col-md-offset-3">
-					<button class="btn btn-primary" id="turn_on">Turn On Lights</button>
-					<button class="btn btn-primary" id="play">Play Music</button>
-					<button class="btn btn-primary" id="bannar_coming">Let's Decorate</button>
-					<button class="btn btn-primary" id="balloons_flying">Fly With Balloons</button>
-					<button class="btn btn-primary" id="cake_fadein">Most Delicious Cake Ever</button>
-					<button class="btn btn-primary" id="light_candle"> Light Candle</button>
-					<button class="btn btn-primary" id="wish_message">Happy Birthday</button>
-					<button class="btn btn-primary" id="story">A mesage for you</button>
-					<!-- <button class="btn btn-primary" id="cake_cut">Lrt's Cut the Cake</button> -->
-				</div>
-			</div>
-			<!-- <div class="col-md-2">
-			</div>
-			<div class="col-md-2">
-			</div>
-			<div class="col-md-2">
-			</div>
-			<div class="col-md-2">
-			</div>
-			<div class="col-md-2">
-			</div> -->
-		</div>
+    <!-- ══ BANNER ═════════════════════════════════════════════ -->
+    <img
+      src="banner.png"
+      class="site-banner"
+      id="site-banner"
+      alt="Happy Birthday Banner"
+    />
 
+    <!-- ══ STAGE ══════════════════════════════════════════════ -->
+    <div class="stage" id="stage">
+      <!-- SCENE 1 · START ════════════════════════════════════ -->
+      <div class="scene" id="scene-start">
+        <div class="start-content">
+          <div class="start-cake-emoji">🎂</div>
+          <h1 class="start-title">Happy Birthday</h1>
+          <div class="start-name">Nidhi</div>
+          <p class="start-sub">A little something made just for you ✨</p>
+          <button class="start-btn" id="start-btn">
+            <span>Begin</span>
+            <span class="btn-sparkle">✦</span>
+          </button>
+        </div>
+      </div>
 
-	</div>
-</body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-<script src="effect.js"></script>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      <!-- SCENE 2 · CELEBRATION ══════════════════════════════ -->
+      <div class="scene hidden" id="scene-celebrate">
+        <!-- Decorative String Lights at top -->
+        <div class="string-lights" id="string-lights">
+          <div class="wire"></div>
+          <span class="bulb-light" style="--c: #ffd700; --s: 1.1s"></span>
+          <span class="bulb-light" style="--c: #ff6b6b; --s: 1.4s"></span>
+          <span class="bulb-light" style="--c: #74b9ff; --s: 0.9s"></span>
+          <span class="bulb-light" style="--c: #55efc4; --s: 1.6s"></span>
+          <span class="bulb-light" style="--c: #fd79a8; --s: 1.2s"></span>
+          <span class="bulb-light" style="--c: #fdcb6e; --s: 1s"></span>
+          <span class="bulb-light" style="--c: #a29bfe; --s: 1.3s"></span>
+          <span class="bulb-light" style="--c: #00cec9; --s: 0.85s"></span>
+          <span class="bulb-light" style="--c: #ffd700; --s: 1.5s"></span>
+          <span class="bulb-light" style="--c: #ff6b6b; --s: 1.1s"></span>
+          <span class="bulb-light" style="--c: #55efc4; --s: 1.35s"></span>
+          <span class="bulb-light" style="--c: #a29bfe; --s: 0.95s"></span>
+        </div>
 
-  ga('create', 'UA-58229732-1', 'auto');
-  ga('send', 'pageview');
+        <!-- Center content area (cake / wish display) -->
+        <div class="celebrate-center" id="celebrate-center">
+          <!-- Cake (hidden until step 5) -->
+          <div class="cake-wrap" id="cake-wrap">
+            <div class="cake" id="cake-el">
+              <div class="cake-candles">
+                <div class="cake-candle">
+                  <div class="flame" id="fl1"></div>
+                </div>
+                <div class="cake-candle">
+                  <div class="flame" id="fl2"></div>
+                </div>
+                <div class="cake-candle">
+                  <div class="flame" id="fl3"></div>
+                </div>
+                <div class="cake-candle">
+                  <div class="flame" id="fl4"></div>
+                </div>
+                <div class="cake-candle">
+                  <div class="flame" id="fl5"></div>
+                </div>
+              </div>
+              <div class="cake-frosting"></div>
+              <div class="cake-body"></div>
+            </div>
+          </div>
 
-</script>
+          <!-- "Happy Birthday Nidhi" wish text (hidden until step 7) -->
+          <div class="wish-display" id="wish-display">
+            <div class="wish-hbd">Happy Birthday</div>
+            <div class="wish-name">Nidhi 🎉</div>
+          </div>
+        </div>
+
+        <!-- Sequential Control Buttons at bottom -->
+        <nav class="ctrl-bar" id="ctrl-bar">
+          <button class="ctrl-btn" id="btn-lights">💡 Turn On Lights</button>
+          <button class="ctrl-btn" id="btn-music">🎵 Play Music</button>
+          <button class="ctrl-btn" id="btn-banner">🎀 Let's Decorate</button>
+          <button class="ctrl-btn" id="btn-balloons">
+            🎈 Fly With Balloons
+          </button>
+          <button class="ctrl-btn" id="btn-cake">🎂 Bring the Cake</button>
+          <button class="ctrl-btn" id="btn-candles">
+            🕯️ Light the Candles
+          </button>
+          <button class="ctrl-btn" id="btn-wish">🎁 Happy Birthday!</button>
+          <button class="ctrl-btn ctrl-btn--special" id="btn-message">
+            💌 A Message for You
+          </button>
+        </nav>
+      </div>
+
+      <!-- SCENE 3 · STORY ═════════════════════════════════════ -->
+      <div class="scene hidden" id="scene-story">
+        <div class="progress-bar">
+          <div class="progress-fill" id="progress-fill"></div>
+        </div>
+        <div class="sentence-wrap">
+          <div class="sentence-card" id="sentence-card">
+            <p class="sentence-text" id="sentence-text"></p>
+          </div>
+        </div>
+        <div class="story-controls">
+          <button class="story-nav-btn" id="btn-prev" title="Previous">
+            ←
+          </button>
+          <button class="story-pause-btn" id="btn-pause" title="Pause">
+            ⏸
+          </button>
+          <button class="story-nav-btn" id="btn-next" title="Next">→</button>
+        </div>
+      </div>
+
+      <!-- SCENE 4 · FINALE ════════════════════════════════════ -->
+      <div class="scene hidden" id="scene-finale">
+        <div class="finale-content">
+          <div class="finale-glow-text">Happy Birthday</div>
+          <div class="finale-name">Nidhi</div>
+          <div class="finale-sub">🎉 Wishing you an amazing year ahead 🎉</div>
+          <button class="replay-btn" id="replay-btn">✦ Read Again</button>
+        </div>
+      </div>
+    </div>
+    <!-- /.stage -->
+
+    <script src="effect.js"></script>
+  </body>
 </html>
