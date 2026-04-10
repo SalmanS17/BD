@@ -21,6 +21,9 @@ const STORY = [
   "just a simple conversation",
   "but somehow,",
   "I still remember it all",
+  "even though it's only been a week or so",
+  "sometimes you behave a little unexpectedly",
+  "but I found you a very innocent and genuine person",
   "every little moment",
   "every message",
   "every small laugh",
@@ -67,7 +70,6 @@ const STORY = [
   "lastly…",
   "I'd like to say once more —",
 ];
-
 /* ─── Helpers ──────────────────────────────────────────── */
 const $id = (id) => document.getElementById(id);
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
