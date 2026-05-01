@@ -270,6 +270,53 @@
           <button class="replay-btn" id="replay-btn">✦ Read Again</button>
         </div>
       </div>
+
+      <!-- SCENE 5 · SURPRISE GIFT & STATS ═══════════════════ -->
+      <div class="scene hidden" id="scene-surprise">
+        <div class="surprise-content">
+          <div class="gift-box-wrap" id="gift-box-wrap">
+            <div class="gift-box" id="gift-box">
+              <div class="gift-box-top">🎁</div>
+              <p class="gift-text">Tap the gift to reveal your surprise</p>
+            </div>
+          </div>
+
+          <!-- Stats Dashboard (hidden, revealed on gift click) -->
+          <div class="stats-dashboard hidden" id="stats-dashboard">
+            <h2 class="stats-title">✨ Your Moment in Numbers</h2>
+            <div class="stats-grid">
+              <div class="stat-card">
+                <div class="stat-number" data-target="365">0</div>
+                <div class="stat-label">Days Together</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-number" data-target="1000">0</div>
+                <div class="stat-label">Moments Shared</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-number" data-target="inf">∞</div>
+                <div class="stat-label">Love & Care</div>
+              </div>
+            </div>
+
+            <!-- 3D Card Flip -->
+            <div class="card-flip-wrap">
+              <div class="card-flip" id="card-flip">
+                <div class="card-front">
+                  <p>Click me to reveal your special message</p>
+                </div>
+                <div class="card-back">
+                  <p>You make every day feel like a celebration 💕</p>
+                </div>
+              </div>
+            </div>
+
+            <button class="finish-btn" id="finish-btn">
+              ✦ Close & Remember
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- /.stage -->
 

@@ -551,8 +551,7 @@ async function storyLoop() {
   }
   if (storyRunning && storyIndex >= STORY.length) {
     await sleep(500);
-    showScene("scene-finale");
-    startConfetti();
+    showScene("scene-surprise");
   }
 }
 
@@ -568,7 +567,7 @@ function skipForward() {
   storyIndex++;
   if (storyIndex >= STORY.length) {
     storyRunning = false;
-    showScene("scene-finale");
+    showScene("scene-surprise");
     startConfetti();
     return;
   }
@@ -802,4 +801,80 @@ window.addEventListener("load", () => {
     },
     { passive: true },
   );
+
+  /* ═══════════════════════════════════════════════════════════
+     SURPRISE GIFT & STATS — Gift Reveal Logic
+  ═══════════════════════════════════════════════════════════ */
+  const giftBox = $id("gift-box");
+  const statsDashboard = $id("stats-dashboard");
+  const cardFlip = $id("card-flip");
+  const finishBtn = $id("finish-btn");
+  const replayBtn = $id("replay-btn");
+
+  // Gift box click to reveal stats
+  giftBox?.addEventListener("click", () => {
+    giftBox.style.pointerEvents = "none";
+    giftBox.style.transform = "scale(0)";
+    giftBox.style.opacity = "0";
+    statsDashboard?.classList.remove("hidden");
+    animateStats();
+  });
+
+  // Animate stats numbers
+  function animateStats() {
+    const statNumbers = document.querySelectorAll(".stat-number");
+    statNumbers.forEach((el) => {
+      const target = parseInt(el.getAttribute("data-target"));
+      if (isNaN(target)) return; // Skip infinite symbol
+      let current = 0;
+      const increment = Math.ceil(target / 50);
+      const interval = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+          current = target;
+          clearInterval(interval);
+        }
+        el.textContent = current;
+      }, 20);
+    });
+  }
+
+  // Card flip toggle
+  cardFlip?.addEventListener("click", () => {
+    cardFlip.classList.toggle("flipped");
+  });
+
+  // Finish button - go back to start
+  finishBtn?.addEventListener("click", () => {
+    location.reload();
+  });
+
+  // Override replay button in finale to show story again
+  const oldReplayBtn = $id("replay-btn");
+  oldReplayBtn?.addEventListener("click", () => {
+    storyIndex = 0;
+    storyPaused = false;
+    storyRunning = false;
+    clearTimeout(storyTimeout);
+    if (progressFill) progressFill.style.width = "0%";
+    showScene("scene-story");
+    setTimeout(() => {
+      storyRunning = true;
+      storyLoop();
+    }, 100);
+  });
+
+  // Replay button in surprise also resets
+  replayBtn?.addEventListener("click", () => {
+    storyIndex = 0;
+    storyPaused = false;
+    storyRunning = false;
+    clearTimeout(storyTimeout);
+    if (progressFill) progressFill.style.width = "0%";
+    showScene("scene-story");
+    setTimeout(() => {
+      storyRunning = true;
+      storyLoop();
+    }, 100);
+  });
 });
