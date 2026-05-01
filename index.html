@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Happy Birthday, Georgiana I 🎂</title>
+    <title>Happy Birthday, Ridhi 🎂</title>
     <meta
       name="description"
-      content="A heartfelt birthday wish for Georgiana I — made with love."
+      content="A heartfelt birthday wish for Ridhi — made with love."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -110,11 +110,14 @@
     <div class="balloons" id="b1b"><span>H</span></div>
     <div class="balloons" id="b2b"><span>B</span></div>
     <div class="balloons" id="b3b"><span>D</span></div>
-    <div class="balloons" id="b4b"><span>A</span></div>
-    <div class="balloons" id="b5b"><span>R</span></div>
-    <div class="balloons" id="b6b"><span>O</span></div>
+    <div class="balloons" id="b4b"><span>R</span></div>
+    <div class="balloons" id="b5b"><span>I</span></div>
+    <div class="balloons" id="b6b"><span>D</span></div>
     <div class="balloons" id="b7b"><span>H</span></div>
     <div class="balloons" id="b8b"><span>I</span></div>
+
+    <!-- ══ PARTICLE EFFECTS CONTAINER ════════════════════════ -->
+    <div class="particles-container" id="particles-container"></div>
 
     <!-- ══ BANNER ═════════════════════════════════════════════ -->
     <img
@@ -131,10 +134,10 @@
         <div class="start-content">
           <div class="start-cake-emoji">🎂</div>
           <h1 class="start-title">Happy Birthday</h1>
-          <div class="start-name">Georgiana I</div>
-          <p class="start-sub">A little something made just for you ✨</p>
+          <div class="start-name">Ridhi</div>
+          <p class="start-sub">A small love note, made just for you ✨</p>
           <button class="start-btn" id="start-btn">
-            <span>Begin</span>
+            <span>Open your wish</span>
             <span class="btn-sparkle">✦</span>
           </button>
         </div>
@@ -186,10 +189,10 @@
             </div>
           </div>
 
-          <!-- "Happy Birthday Georgiana I" wish text (hidden until step 7) -->
+          <!-- "Happy Birthday Ridhi" wish text (hidden until step 7) -->
           <div class="wish-display" id="wish-display">
             <div class="wish-hbd">Happy Birthday</div>
-            <div class="wish-name">Georgiana I 🎉</div>
+            <div class="wish-name">Ridhi 🎉</div>
           </div>
         </div>
 
@@ -217,6 +220,29 @@
         <div class="progress-bar">
           <div class="progress-fill" id="progress-fill"></div>
         </div>
+        <!-- Video Container (hidden by default, shown when needed) -->
+        <div class="video-container hidden" id="video-container">
+          <div class="video-wrapper">
+            <iframe
+              id="story-video"
+              width="100%"
+              height="360"
+              src="about:blank"
+              title="Special Video"
+              frameborder="0"
+              allow="
+                accelerometer;
+                autoplay;
+                clipboard-write;
+                encrypted-media;
+                gyroscope;
+                picture-in-picture;
+              "
+              allowfullscreen
+            >
+            </iframe>
+          </div>
+        </div>
         <div class="sentence-wrap">
           <div class="sentence-card" id="sentence-card">
             <p class="sentence-text" id="sentence-text"></p>
@@ -237,8 +263,10 @@
       <div class="scene hidden" id="scene-finale">
         <div class="finale-content">
           <div class="finale-glow-text">Happy Birthday</div>
-          <div class="finale-name">Georgiana I</div>
-          <div class="finale-sub">🎉 Wishing you an amazing year ahead 🎉</div>
+          <div class="finale-name">Ridhi</div>
+          <div class="finale-sub">
+            🎉 Wishing you a year as lovely as you are 🎉
+          </div>
           <button class="replay-btn" id="replay-btn">✦ Read Again</button>
         </div>
       </div>

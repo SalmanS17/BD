@@ -8,75 +8,78 @@
    BIRTHDAY STORY — sentence by sentence
 ═══════════════════════════════════════════════════════════ */
 const STORY = [
-  "Today is…",
-  "as beautiful as any other day",
-  "but somehow this moment feels a little special",
-  "because your special day is coming soon",
-  "yes… <span class='name'>Georgiana I</span>",
-  "your birthday is just next week",
-  "and I didn’t want to wait until then",
-  "to say something from the heart",
+  "So… here we are",
+  "your special day feels like a gentle sunrise",
+  "Happy Birthday, <span class='name'>Ridhi</span> 🤍",
   "<span class='divider'>✦ ✦ ✦</span>",
-  "Do you remember…?",
-  "the very first time we talked",
-  "it was only for a few minutes",
-  "maybe just 5 or 6…",
-  "just a simple conversation",
-  "but somehow,",
-  "it stayed in my mind",
-  "even though it was so short",
-  "there was something very genuine about it",
+  "I wasn’t sure how to start this",
+  "because I wanted it to feel warm",
+  "not just another birthday wish",
   "<span class='divider'>✦ ✦ ✦</span>",
-  "sometimes",
-  "even the shortest conversations",
-  "leave the warmest memories",
-  "and in those few minutes",
-  "I found you a very innocent and kind person",
+  "it’s something soft and honest",
+  "how every moment with you feels meaningful",
+  "since we first started talking",
+  "and somehow",
+  "that first quiet conversation",
+  "still feels just as clear",
   "<span class='divider'>✦ ✦ ✦</span>",
-  "even though we are from different countries",
-  "and have never met in person",
-  "that small conversation we shared",
-  "still feels special to me",
-  "and I'm really glad",
-  "that our paths crossed",
+  "I still remember",
+  "how easy it felt",
+  "like sitting in the calmest place",
+  "where nothing was forced",
+  "and everything felt right",
   "<span class='divider'>✦ ✦ ✦</span>",
-  "so before your birthday arrives…",
-  "I just wanted to make",
-  "a small little surprise",
-  "something simple",
-  "but filled with good wishes",
-  "just for you, <span class='name'>Georgiana I</span>",
+  "and over time…",
+  "there were small things I noticed",
+  "the kind of details I wanted to keep",
   "<span class='divider'>✦ ✦ ✦</span>",
-  "thank you",
-  "for that short conversation",
-  "for that little moment",
-  "that somehow became memorable",
+  "your voice…",
+  "it has a gentle rhythm to it",
+  "like something you could listen to",
+  "on a quiet evening",
+  "and suddenly feel at peace",
+  "it’s soft…",
+  "comforting…",
+  "and it stays with me longer than expected",
   "<span class='divider'>✦ ✦ ✦</span>",
-  "and when your special day comes next week",
-  "I truly wish",
-  "that it brings you <span class='glow-word'>happiness</span>",
-  "<span class='glow-word'>success</span>",
-  "and many beautiful moments",
-  "May your dreams grow bigger",
-  "and your worries become smaller",
-  "May life give you endless reasons to smile",
-  "and wonderful memories to keep",
+  "and your eyes…",
+  "they have their own way of speaking",
+  "a softness mixed with a little spark",
+  "something tender… yet unforgettable",
+  "like they carry stories",
+  "even when you don’t say a word",
   "<span class='divider'>✦ ✦ ✦</span>",
-  "Remember",
-  "you are <span class='glow-word'>stronger</span> than you think",
-  "and <span class='glow-word'>brighter</span> than you realize",
-  "so keep shining",
-  "keep smiling",
-  "and keep being the amazing person you are",
+  "maybe that’s why",
+  "talking to you never really feels like effort",
+  "it just feels… natural",
   "<span class='divider'>✦ ✦ ✦</span>",
-  "I hope your birthday next week",
-  "becomes a memory worth remembering",
-  "lastly…",
-  "I'd like to say once more —",
+  "so today,",
+  "I just want to wish you",
+  "<span class='glow-word'>joy</span>",
+  "<span class='glow-word'>peace</span>",
+  "and moments that make you smile",
+  "without even realizing it",
+  "<span class='divider'>✦ ✦ ✦</span>",
+  "I hope this year brings you",
+  "beautiful memories",
+  "warm surprises",
+  "and everything your heart quietly wishes for",
+  "<span class='divider'>✦ ✦ ✦</span>",
+  "so keep smiling",
+  "keep shining",
+  "and keep being exactly who you are",
+  "<span class='divider'>✦ ✦ ✦</span>",
+  "once again…",
+  "Happy Birthday, <span class='name'>Ridhi</span> 🤍",
 ];
 /* ─── Helpers ──────────────────────────────────────────── */
 const $id = (id) => document.getElementById(id);
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+/* Video Configuration - Add your videos here */
+const VIDEO_MOMENTS = {
+  // Add more videos as needed: 10: "https://youtube.com/watch?v=xxx"
+};
 
 function wordCount(html) {
   return html
@@ -91,6 +94,65 @@ function holdDuration(html) {
   if (wc <= 5) return 2200;
   if (wc <= 10) return 3000;
   return 3800;
+}
+
+/* ─── Particle Effects ─────────────────────────────────── */
+function createParticle(type = "heart") {
+  const container = $id("particles-container");
+  if (!container) return;
+
+  const particle = document.createElement("div");
+  particle.className = `particle ${type}`;
+  particle.textContent = type === "heart" ? "❤" : "✨";
+  particle.style.left = Math.random() * window.innerWidth + "px";
+  particle.style.top = Math.random() * (window.innerHeight * 0.6) + "px";
+
+  container.appendChild(particle);
+
+  setTimeout(() => particle.remove(), type === "heart" ? 3000 : 2000);
+}
+
+function spawnParticles(count = 3, type = "heart") {
+  for (let i = 0; i < count; i++) {
+    setTimeout(() => createParticle(type), i * 100);
+  }
+}
+
+/* ─── Video Management ─────────────────────────────────── */
+function showVideo(videoId) {
+  const container = $id("video-container");
+  const iframe = $id("story-video");
+  if (!container || !iframe) return;
+
+  // Extract YouTube video ID and create embed URL
+  let embedUrl = "";
+  if (videoId.includes("youtube.com") || videoId.includes("youtu.be")) {
+    const match = videoId.match(
+      /(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/ ]{11})/,
+    );
+    if (match && match[1]) {
+      embedUrl = `https://www.youtube.com/embed/${match[1]}`;
+    }
+  } else if (videoId.includes("shorts")) {
+    const match = videoId.match(/shorts\/([^?&\/ ]+)/);
+    if (match && match[1]) {
+      embedUrl = `https://www.youtube.com/embed/${match[1]}`;
+    }
+  } else {
+    embedUrl = videoId;
+  }
+
+  iframe.src = embedUrl;
+  container.classList.remove("hidden");
+}
+
+function hideVideo() {
+  const container = $id("video-container");
+  if (container) {
+    container.classList.add("hidden");
+    const iframe = $id("story-video");
+    if (iframe) iframe.src = "about:blank";
+  }
 }
 
 /* ─── Scene Switcher ───────────────────────────────────── */
@@ -425,6 +487,37 @@ function updateProgress() {
 async function showSentence(index) {
   if (index < 0 || index >= STORY.length) return;
   const html = STORY[index];
+
+  // Show/hide video based on configuration
+  if (VIDEO_MOMENTS[index]) {
+    showVideo(VIDEO_MOMENTS[index]);
+  } else {
+    hideVideo();
+  }
+
+  // Emotion-responsive background logic
+  const emotionalIndices = [34, 35, 36, 37, 38, 39]; // Eyes section (heartfelt)
+  const joyfulIndices = [47, 48, 49]; // Wishes section (joyful)
+
+  // Remove all emotion classes
+  sentenceCard.classList.remove(
+    "emotional-moment",
+    "joyful-moment",
+    "heartfelt-moment",
+  );
+
+  // Apply emotion class based on story index
+  if (emotionalIndices.includes(index)) {
+    sentenceCard.classList.add("emotional-moment");
+    spawnParticles(3, "heart");
+  } else if (joyfulIndices.includes(index)) {
+    sentenceCard.classList.add("joyful-moment");
+    spawnParticles(4, "sparkle");
+  } else if (index >= 25 && index <= 33) {
+    sentenceCard.classList.add("heartfelt-moment");
+    spawnParticles(2, "heart");
+  }
+
   if (sentenceCard.classList.contains("visible")) {
     sentenceCard.classList.remove("visible");
     sentenceCard.classList.add("exiting");

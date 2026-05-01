@@ -9,6 +9,7 @@
   --bg-1: #0d0818;
   --bg-2: #1a0f2e;
   --clr-rose: #f9a8d4;
+  --clr-pink: #ff92cf;
   --clr-gold: #fbbf24;
   --clr-purple: #c084fc;
   --clr-soft: #fde8d8;
@@ -36,8 +37,9 @@ body {
 body {
   background: radial-gradient(
     ellipse at 30% 40%,
-    #1e0a35 0%,
-    #0d0818 55%,
+    #3b0d3f 0%,
+    #1e0a35 35%,
+    #0d0818 70%,
     #120820 100%
   );
   color: #fff;
@@ -97,6 +99,82 @@ body {
   }
 }
 
+/* ── Advanced Particle Animations ──────────────────────── */
+@keyframes floatHeart {
+  0% {
+    opacity: 0;
+    transform: translateY(0) scale(0);
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(-10px) scale(1);
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-80px) scale(0.3);
+  }
+}
+
+@keyframes sparkle {
+  0%,
+  100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes glowPulse {
+  0%,
+  100% {
+    text-shadow:
+      0 0 10px rgba(249, 168, 212, 0.5),
+      0 0 20px rgba(192, 132, 252, 0.3);
+  }
+  50% {
+    text-shadow:
+      0 0 20px rgba(249, 168, 212, 0.8),
+      0 0 40px rgba(192, 132, 252, 0.6);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes expandGlow {
+  from {
+    box-shadow: 0 0 0 0 rgba(249, 168, 212, 0.7);
+  }
+  to {
+    box-shadow: 0 0 0 20px rgba(249, 168, 212, 0);
+  }
+}
+
 /* ── Floating Image Lights ───────────────────────────────── */
 .bg-lights {
   position: fixed;
@@ -129,6 +207,82 @@ body {
 }
 #confetti-canvas.active {
   opacity: 1;
+}
+
+/* ── Particles (hearts, sparkles) ────────────────────────── */
+.particles-container {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 91;
+}
+
+.particle {
+  position: fixed;
+  pointer-events: none;
+  font-size: 1.5rem;
+}
+
+.particle.heart {
+  animation: floatHeart 3s ease-out forwards;
+  color: #f9a8d4;
+  text-shadow: 0 0 10px rgba(249, 168, 212, 0.6);
+}
+
+.particle.sparkle {
+  animation: sparkle 2s ease-out forwards;
+  font-size: 1.2rem;
+  color: #fbbf24;
+  text-shadow: 0 0 8px rgba(251, 191, 36, 0.7);
+}
+
+/* ── Video Container ───────────────────────────────────── */
+.video-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  border-radius: 16px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 6px;
+  opacity: 1;
+  transform: scale(1);
+  transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  pointer-events: auto;
+  z-index: 8;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+.video-container.hidden {
+  opacity: 0;
+  transform: scale(0.92);
+  pointer-events: none;
+  display: none;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  background: #000;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.video-wrapper::before {
+  content: "";
+  display: block;
+  padding-bottom: 56.25%;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
 }
 
 /* ── Stage & Scenes ──────────────────────────────────────── */
@@ -221,7 +375,8 @@ body {
 }
 .start-sub {
   font-size: clamp(0.9rem, 2.5vw, 1.1rem);
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(255, 214, 239, 0.9);
+  text-shadow: 0 0 10px rgba(255, 214, 239, 0.2);
   letter-spacing: 0.08em;
   margin-top: 0.3rem;
 }
@@ -232,9 +387,13 @@ body {
   gap: 0.6rem;
   padding: 0.75rem 2.5rem;
   border-radius: 50px;
-  border: 1.5px solid rgba(249, 168, 212, 0.35);
-  background: rgba(249, 168, 212, 0.08);
-  color: rgba(255, 255, 255, 0.9);
+  border: 1.5px solid rgba(255, 192, 233, 0.45);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 192, 233, 0.18),
+    rgba(192, 132, 252, 0.16)
+  );
+  color: rgba(255, 255, 255, 0.95);
   font-family: var(--font-body);
   font-size: 1rem;
   font-weight: 600;
@@ -671,6 +830,33 @@ body {
   position: relative;
   overflow: hidden;
 }
+.ctrl-btn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+.ctrl-btn:active::after {
+  animation: ripple 0.6s ease-out;
+}
+@keyframes ripple {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+  }
+}
 .ctrl-btn:hover {
   border-color: rgba(255, 255, 255, 0.3);
   background: rgba(255, 255, 255, 0.13);
@@ -738,8 +924,32 @@ body {
   z-index: 5;
   transition:
     opacity 0.6s ease,
-    transform 0.6s var(--ease-out);
+    transform 0.6s var(--ease-out),
+    background 0.8s ease,
+    border-color 0.8s ease;
   will-change: opacity, transform;
+}
+/* Emotion-responsive backgrounds */
+.sentence-card.emotional-moment {
+  background: rgba(192, 132, 252, 0.1);
+  border-color: rgba(192, 132, 252, 0.2);
+  box-shadow:
+    0 20px 70px rgba(0, 0, 0, 0.5),
+    0 0 30px rgba(192, 132, 252, 0.2);
+}
+.sentence-card.joyful-moment {
+  background: rgba(251, 191, 36, 0.08);
+  border-color: rgba(251, 191, 36, 0.2);
+  box-shadow:
+    0 20px 70px rgba(0, 0, 0, 0.5),
+    0 0 30px rgba(251, 191, 36, 0.15);
+}
+.sentence-card.heartfelt-moment {
+  background: rgba(249, 168, 212, 0.08);
+  border-color: rgba(249, 168, 212, 0.2);
+  box-shadow:
+    0 20px 70px rgba(0, 0, 0, 0.5),
+    0 0 30px rgba(249, 168, 212, 0.2);
 }
 .sentence-text {
   font-family: var(--font-msg);
@@ -761,6 +971,7 @@ body {
   font-style: normal;
   color: var(--clr-gold);
   font-weight: 400;
+  animation: glowPulse 2s ease-in-out infinite;
 }
 .sentence-text .divider {
   font-size: 1rem;
@@ -860,7 +1071,7 @@ body {
 }
 .finale-sub {
   font-size: clamp(0.9rem, 2.5vw, 1.1rem);
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 214, 239, 0.85);
   letter-spacing: 0.05em;
   margin-top: 0.5rem;
 }
@@ -871,9 +1082,9 @@ body {
   gap: 0.5rem;
   padding: 0.7rem 2rem;
   border-radius: 50px;
-  border: 1.5px solid rgba(251, 191, 36, 0.3);
-  background: rgba(251, 191, 36, 0.07);
-  color: rgba(255, 255, 255, 0.85);
+  border: 1.5px solid rgba(249, 168, 212, 0.4);
+  background: rgba(249, 168, 212, 0.1);
+  color: rgba(255, 255, 255, 0.95);
   font-family: var(--font-body);
   font-size: 0.9rem;
   font-weight: 600;
