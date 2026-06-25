@@ -1192,6 +1192,7 @@ body::before {
     calc(clamp(0.6rem, 1.2vw, 1rem) + env(safe-area-inset-bottom, 0))
     clamp(0.6rem, 1.2vw, 1rem);
   display: flex;
+  align-items: flex-start;
   flex-wrap: wrap;
   justify-content: center;
   gap: clamp(0.3rem, 0.6vw, 0.45rem);
@@ -1206,7 +1207,7 @@ body::before {
   max-height: clamp(85px, 18vh, 160px);
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 .ctrl-btn {
   display: none;
