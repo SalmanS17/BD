@@ -1937,7 +1937,7 @@ body::before {
   }
   .ctrl-bar {
     max-height: calc(clamp(80px, 15vh, 130px) + env(safe-area-inset-bottom, 0));
-    padding: 0.5rem 0.6rem calc(0.6rem + env(safe-area-inset-bottom, 0));
+    padding: 0.25rem 0.6rem calc(0.6rem + env(safe-area-inset-bottom, 0));
   }
   .ctrl-btn {
     font-size: clamp(0.58rem, 1.5vw, 0.68rem);
@@ -2018,7 +2018,7 @@ body::before {
   }
   .ctrl-bar {
     max-height: clamp(75px, 14vh, 115px);
-    padding: 0.45rem 0.5rem 0.5rem;
+    padding: 0.2rem 0.5rem 0.5rem;
   }
   .sentence-card {
     padding: 1.4rem 1.1rem;
