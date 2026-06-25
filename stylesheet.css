@@ -53,9 +53,15 @@ body {
   justify-content: center;
 }
 @keyframes gradientShift {
-  0% { background-position: 0% 0%; }
-  50% { background-position: 100% 100%; }
-  100% { background-position: 0% 100%; }
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 100%;
+  }
 }
 
 /* ── Starfield Layer ─────────────────────────────────────── */
@@ -66,27 +72,93 @@ body::before {
   z-index: 0;
   pointer-events: none;
   background-image:
-    radial-gradient(1px 1px at 10% 20%, rgba(255,255,255,0.7) 0%, transparent 100%),
-    radial-gradient(1px 1px at 25% 45%, rgba(255,255,255,0.5) 0%, transparent 100%),
-    radial-gradient(1.5px 1.5px at 40% 15%, rgba(255,255,255,0.8) 0%, transparent 100%),
-    radial-gradient(1px 1px at 55% 70%, rgba(255,255,255,0.4) 0%, transparent 100%),
-    radial-gradient(1.5px 1.5px at 70% 35%, rgba(255,255,255,0.6) 0%, transparent 100%),
-    radial-gradient(1px 1px at 85% 55%, rgba(255,255,255,0.5) 0%, transparent 100%),
-    radial-gradient(1px 1px at 15% 75%, rgba(255,255,255,0.6) 0%, transparent 100%),
-    radial-gradient(1.5px 1.5px at 60% 90%, rgba(255,255,255,0.4) 0%, transparent 100%),
-    radial-gradient(1px 1px at 90% 10%, rgba(255,255,255,0.7) 0%, transparent 100%),
-    radial-gradient(1px 1px at 35% 60%, rgba(255,255,255,0.3) 0%, transparent 100%),
-    radial-gradient(1.5px 1.5px at 50% 30%, rgba(255,255,255,0.5) 0%, transparent 100%),
-    radial-gradient(1px 1px at 75% 85%, rgba(255,255,255,0.6) 0%, transparent 100%),
-    radial-gradient(1px 1px at 5% 50%, rgba(255,255,255,0.4) 0%, transparent 100%),
-    radial-gradient(1px 1px at 95% 40%, rgba(255,255,255,0.5) 0%, transparent 100%),
-    radial-gradient(1.5px 1.5px at 45% 95%, rgba(255,255,255,0.3) 0%, transparent 100%);
+    radial-gradient(
+      1px 1px at 10% 20%,
+      rgba(255, 255, 255, 0.7) 0%,
+      transparent 100%
+    ),
+    radial-gradient(
+      1px 1px at 25% 45%,
+      rgba(255, 255, 255, 0.5) 0%,
+      transparent 100%
+    ),
+    radial-gradient(
+      1.5px 1.5px at 40% 15%,
+      rgba(255, 255, 255, 0.8) 0%,
+      transparent 100%
+    ),
+    radial-gradient(
+      1px 1px at 55% 70%,
+      rgba(255, 255, 255, 0.4) 0%,
+      transparent 100%
+    ),
+    radial-gradient(
+      1.5px 1.5px at 70% 35%,
+      rgba(255, 255, 255, 0.6) 0%,
+      transparent 100%
+    ),
+    radial-gradient(
+      1px 1px at 85% 55%,
+      rgba(255, 255, 255, 0.5) 0%,
+      transparent 100%
+    ),
+    radial-gradient(
+      1px 1px at 15% 75%,
+      rgba(255, 255, 255, 0.6) 0%,
+      transparent 100%
+    ),
+    radial-gradient(
+      1.5px 1.5px at 60% 90%,
+      rgba(255, 255, 255, 0.4) 0%,
+      transparent 100%
+    ),
+    radial-gradient(
+      1px 1px at 90% 10%,
+      rgba(255, 255, 255, 0.7) 0%,
+      transparent 100%
+    ),
+    radial-gradient(
+      1px 1px at 35% 60%,
+      rgba(255, 255, 255, 0.3) 0%,
+      transparent 100%
+    ),
+    radial-gradient(
+      1.5px 1.5px at 50% 30%,
+      rgba(255, 255, 255, 0.5) 0%,
+      transparent 100%
+    ),
+    radial-gradient(
+      1px 1px at 75% 85%,
+      rgba(255, 255, 255, 0.6) 0%,
+      transparent 100%
+    ),
+    radial-gradient(
+      1px 1px at 5% 50%,
+      rgba(255, 255, 255, 0.4) 0%,
+      transparent 100%
+    ),
+    radial-gradient(
+      1px 1px at 95% 40%,
+      rgba(255, 255, 255, 0.5) 0%,
+      transparent 100%
+    ),
+    radial-gradient(
+      1.5px 1.5px at 45% 95%,
+      rgba(255, 255, 255, 0.3) 0%,
+      transparent 100%
+    );
   animation: starTwinkle 6s ease-in-out infinite alternate;
 }
 @keyframes starTwinkle {
-  0% { opacity: 0.5; }
-  50% { opacity: 0.9; }
-  100% { opacity: 0.6; }
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0.6;
+  }
 }
 
 /* ── Floating Hearts Layer (CSS-only) ───────────────────── */
@@ -104,14 +176,54 @@ body::before {
   opacity: 0;
   animation: floatUpHeart linear infinite;
 }
-.floating-hearts span:nth-child(1) { left: 8%; font-size: 1.2rem; animation-duration: 12s; animation-delay: 0s; }
-.floating-hearts span:nth-child(2) { left: 22%; font-size: 0.9rem; animation-duration: 15s; animation-delay: 2s; }
-.floating-hearts span:nth-child(3) { left: 38%; font-size: 1.4rem; animation-duration: 11s; animation-delay: 4s; }
-.floating-hearts span:nth-child(4) { left: 55%; font-size: 1rem; animation-duration: 14s; animation-delay: 1s; }
-.floating-hearts span:nth-child(5) { left: 70%; font-size: 1.3rem; animation-duration: 13s; animation-delay: 3s; }
-.floating-hearts span:nth-child(6) { left: 85%; font-size: 0.8rem; animation-duration: 16s; animation-delay: 5s; }
-.floating-hearts span:nth-child(7) { left: 48%; font-size: 1.1rem; animation-duration: 14s; animation-delay: 7s; }
-.floating-hearts span:nth-child(8) { left: 92%; font-size: 1rem; animation-duration: 12s; animation-delay: 6s; }
+.floating-hearts span:nth-child(1) {
+  left: 8%;
+  font-size: 1.2rem;
+  animation-duration: 12s;
+  animation-delay: 0s;
+}
+.floating-hearts span:nth-child(2) {
+  left: 22%;
+  font-size: 0.9rem;
+  animation-duration: 15s;
+  animation-delay: 2s;
+}
+.floating-hearts span:nth-child(3) {
+  left: 38%;
+  font-size: 1.4rem;
+  animation-duration: 11s;
+  animation-delay: 4s;
+}
+.floating-hearts span:nth-child(4) {
+  left: 55%;
+  font-size: 1rem;
+  animation-duration: 14s;
+  animation-delay: 1s;
+}
+.floating-hearts span:nth-child(5) {
+  left: 70%;
+  font-size: 1.3rem;
+  animation-duration: 13s;
+  animation-delay: 3s;
+}
+.floating-hearts span:nth-child(6) {
+  left: 85%;
+  font-size: 0.8rem;
+  animation-duration: 16s;
+  animation-delay: 5s;
+}
+.floating-hearts span:nth-child(7) {
+  left: 48%;
+  font-size: 1.1rem;
+  animation-duration: 14s;
+  animation-delay: 7s;
+}
+.floating-hearts span:nth-child(8) {
+  left: 92%;
+  font-size: 1rem;
+  animation-duration: 12s;
+  animation-delay: 6s;
+}
 @keyframes floatUpHeart {
   0% {
     opacity: 0;
@@ -140,7 +252,11 @@ body::before {
   inset: 0;
   z-index: 1;
   pointer-events: none;
-  background: radial-gradient(ellipse at center, transparent 40%, rgba(0,0,0,0.6) 100%);
+  background: radial-gradient(
+    ellipse at center,
+    transparent 40%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
   opacity: 0;
   transition: opacity 1.2s ease;
 }
@@ -426,17 +542,29 @@ body::before {
 .start-content > * {
   opacity: 0;
   transform: translateY(25px) scale(0.95);
-  transition: opacity 0.9s var(--ease-out), transform 0.9s var(--ease-out);
+  transition:
+    opacity 0.9s var(--ease-out),
+    transform 0.9s var(--ease-out);
 }
 .start-content.revealed > * {
   opacity: 1;
   transform: translateY(0) scale(1);
 }
-.start-content > *:nth-child(1) { transition-delay: 0.2s; }
-.start-content > *:nth-child(2) { transition-delay: 0.5s; }
-.start-content > *:nth-child(3) { transition-delay: 0.8s; }
-.start-content > *:nth-child(4) { transition-delay: 1.1s; }
-.start-content > *:nth-child(5) { transition-delay: 1.5s; }
+.start-content > *:nth-child(1) {
+  transition-delay: 0.2s;
+}
+.start-content > *:nth-child(2) {
+  transition-delay: 0.5s;
+}
+.start-content > *:nth-child(3) {
+  transition-delay: 0.8s;
+}
+.start-content > *:nth-child(4) {
+  transition-delay: 1.1s;
+}
+.start-content > *:nth-child(5) {
+  transition-delay: 1.5s;
+}
 @keyframes staggerIn {
   from {
     opacity: 0;
@@ -473,7 +601,8 @@ body::before {
   animation: pulseRing 2.5s ease-in-out infinite;
 }
 @keyframes pulseRing {
-  0%, 100% {
+  0%,
+  100% {
     transform: scale(0.9);
     opacity: 0.3;
     border-color: rgba(249, 168, 212, 0.3);
@@ -560,11 +689,14 @@ body::before {
   animation: btnBreathe 3s ease-in-out infinite;
 }
 @keyframes btnBreathe {
-  0%, 100% {
+  0%,
+  100% {
     box-shadow: 0 0 15px rgba(249, 168, 212, 0.15);
   }
   50% {
-    box-shadow: 0 0 30px rgba(249, 168, 212, 0.35), 0 0 60px rgba(183, 148, 246, 0.15);
+    box-shadow:
+      0 0 30px rgba(249, 168, 212, 0.35),
+      0 0 60px rgba(183, 148, 246, 0.15);
   }
 }
 /* Sweeping light effect */
@@ -585,13 +717,20 @@ body::before {
   animation: sweepLight 3.5s ease-in-out infinite;
 }
 @keyframes sweepLight {
-  0%, 100% { left: -60%; }
-  50% { left: 120%; }
+  0%,
+  100% {
+    left: -60%;
+  }
+  50% {
+    left: 120%;
+  }
 }
 .start-btn:hover {
   border-color: rgba(249, 168, 212, 0.7);
   transform: translateY(-3px) scale(1.04);
-  box-shadow: 0 8px 30px rgba(249, 168, 212, 0.3), 0 0 50px rgba(183, 148, 246, 0.15);
+  box-shadow:
+    0 8px 30px rgba(249, 168, 212, 0.3),
+    0 0 50px rgba(183, 148, 246, 0.15);
   animation: none;
 }
 .start-btn:active {
@@ -760,7 +899,11 @@ body::before {
   transform: translateX(-50%);
   width: 1.5px;
   height: clamp(18px, 5vw, 24px);
-  background: linear-gradient(to bottom, rgba(255,255,255,0.5), rgba(255,255,255,0.1));
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.1)
+  );
 }
 /* Specular highlight */
 .balloons::before {
@@ -771,7 +914,11 @@ body::before {
   width: 22%;
   height: 18%;
   border-radius: 50%;
-  background: radial-gradient(ellipse, rgba(255,255,255,0.55) 0%, transparent 100%);
+  background: radial-gradient(
+    ellipse,
+    rgba(255, 255, 255, 0.55) 0%,
+    transparent 100%
+  );
   pointer-events: none;
 }
 .balloons span {
@@ -961,7 +1108,11 @@ body::before {
   display: block;
   width: 210px;
   height: 12px;
-  background: linear-gradient(135deg, rgba(255,255,255,0.12), rgba(255,255,255,0.04));
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.12),
+    rgba(255, 255, 255, 0.04)
+  );
   border-radius: 50%;
   margin-top: 4px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
@@ -1037,12 +1188,18 @@ body::before {
   bottom: 0;
   left: 0;
   right: 0;
-  padding: clamp(0.5rem, 1vw, 0.8rem) clamp(0.6rem, 1.2vw, 1rem) calc(clamp(0.6rem, 1.2vw, 1rem) + env(safe-area-inset-bottom, 0)) clamp(0.6rem, 1.2vw, 1rem);
+  padding: clamp(0.5rem, 1vw, 0.8rem) clamp(0.6rem, 1.2vw, 1rem)
+    calc(clamp(0.6rem, 1.2vw, 1rem) + env(safe-area-inset-bottom, 0))
+    clamp(0.6rem, 1.2vw, 1rem);
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: clamp(0.3rem, 0.6vw, 0.45rem);
-  background: linear-gradient(to top, rgba(13, 8, 24, 0.99) 70%, rgba(13, 8, 24, 0.85) 100%);
+  background: linear-gradient(
+    to top,
+    rgba(13, 8, 24, 0.99) 70%,
+    rgba(13, 8, 24, 0.85) 100%
+  );
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   z-index: 30;
@@ -1179,7 +1336,12 @@ body::before {
   position: absolute;
   inset: -1px;
   border-radius: 25px;
-  background: linear-gradient(135deg, rgba(249,168,212,0.15), rgba(183,148,246,0.1), rgba(245,200,66,0.1));
+  background: linear-gradient(
+    135deg,
+    rgba(249, 168, 212, 0.15),
+    rgba(183, 148, 246, 0.1),
+    rgba(245, 200, 66, 0.1)
+  );
   z-index: -1;
   opacity: 0.5;
   transition: opacity 0.8s ease;
@@ -1229,8 +1391,13 @@ body::before {
   animation: blinkCursor 1s step-end infinite;
 }
 @keyframes blinkCursor {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
 }
 .sentence-text .name {
   font-style: normal;
@@ -1243,8 +1410,14 @@ body::before {
   animation: nameGlowPulse 2.5s ease-in-out infinite alternate;
 }
 @keyframes nameGlowPulse {
-  from { text-shadow: 0 0 15px rgba(249, 168, 212, 0.5); }
-  to { text-shadow: 0 0 30px rgba(249, 168, 212, 0.8), 0 0 60px rgba(249, 168, 212, 0.3); }
+  from {
+    text-shadow: 0 0 15px rgba(249, 168, 212, 0.5);
+  }
+  to {
+    text-shadow:
+      0 0 30px rgba(249, 168, 212, 0.8),
+      0 0 60px rgba(249, 168, 212, 0.3);
+  }
 }
 .sentence-text .glow-word {
   font-style: normal;
@@ -1261,8 +1434,16 @@ body::before {
   animation: dividerSpread 0.8s var(--ease-out) forwards;
 }
 @keyframes dividerSpread {
-  from { letter-spacing: 0; opacity: 0; transform: scaleX(0.5); }
-  to { letter-spacing: 0.8rem; opacity: 1; transform: scaleX(1); }
+  from {
+    letter-spacing: 0;
+    opacity: 0;
+    transform: scaleX(0.5);
+  }
+  to {
+    letter-spacing: 0.8rem;
+    opacity: 1;
+    transform: scaleX(1);
+  }
 }
 .sentence-card.entering {
   opacity: 0;
@@ -1420,7 +1601,7 @@ body::before {
   transition: all 0.5s var(--ease-out);
   box-shadow:
     0 10px 40px rgba(249, 168, 212, 0.2),
-    inset 0 1px 0 rgba(255,255,255,0.1);
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
   position: relative;
   overflow: hidden;
 }
@@ -1432,7 +1613,11 @@ body::before {
   left: 0;
   right: 0;
   height: 10px;
-  background: linear-gradient(90deg, rgba(245,200,66,0.6), rgba(249,168,212,0.6));
+  background: linear-gradient(
+    90deg,
+    rgba(245, 200, 66, 0.6),
+    rgba(249, 168, 212, 0.6)
+  );
   transform: translateY(-50%);
   pointer-events: none;
 }
@@ -1444,7 +1629,11 @@ body::before {
   top: 0;
   bottom: 0;
   width: 10px;
-  background: linear-gradient(180deg, rgba(245,200,66,0.6), rgba(249,168,212,0.6));
+  background: linear-gradient(
+    180deg,
+    rgba(245, 200, 66, 0.6),
+    rgba(249, 168, 212, 0.6)
+  );
   transform: translateX(-50%);
   pointer-events: none;
 }
@@ -1548,7 +1737,12 @@ body::before {
   left: -60%;
   width: 40%;
   height: 200%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.08), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.08),
+    transparent
+  );
   transform: skewX(-20deg);
   transition: left 0.6s ease;
 }
@@ -1757,7 +1951,8 @@ body::before {
     font-size: clamp(1rem, 2.6vw, 1.3rem);
   }
   .scene {
-    padding: 1.5rem 1rem calc(clamp(90px, 16vh, 120px) + env(safe-area-inset-bottom, 0)) 1rem;
+    padding: 1.5rem 1rem
+      calc(clamp(90px, 16vh, 120px) + env(safe-area-inset-bottom, 0)) 1rem;
   }
   .story-controls {
     bottom: 1.5rem;
@@ -1817,7 +2012,8 @@ body::before {
     font-size: clamp(0.9rem, 2.2vw, 1.1rem);
   }
   .scene {
-    padding: 1.2rem 0.8rem calc(clamp(80px, 14vh, 100px) + env(safe-area-inset-bottom, 0)) 0.8rem;
+    padding: 1.2rem 0.8rem
+      calc(clamp(80px, 14vh, 100px) + env(safe-area-inset-bottom, 0)) 0.8rem;
   }
   .ctrl-bar {
     max-height: clamp(75px, 14vh, 115px);
