@@ -8,98 +8,98 @@
    BIRTHDAY STORY — sentence by sentence
 ═══════════════════════════════════════════════════════════ */
 const STORY = [
-"turn down the noise for a moment...",
-"because today is about someone special",
-"<span class='divider'>✦ ✦ ✦</span>",
+  "turn down the noise for a moment...",
+  "because today is about someone special",
+  "<span class='divider'>✦ ✦ ✦</span>",
 
-"Happy Birthday, <span class='name'>Sam</span> 🤍",
-"the girl who somehow became",
-"one of my favorite parts of every day",
-"<span class='divider'>✦ ✦ ✦</span>",
+  "Happy Birthday, <span class='name'>Sam</span> 🤍",
+  "the girl who somehow became",
+  "one of my favorite parts of every day",
+  "<span class='divider'>✦ ✦ ✦</span>",
 
-"a year ago",
-"you were just someone I was about to meet",
-"and now...",
-"you are someone I can't imagine not talking to",
-"<span class='divider'>✦ ✦ ✦</span>",
+  "a year ago",
+  "you were just someone I was about to meet",
+  "and now...",
+  "you are someone I can't imagine not talking to",
+  "<span class='divider'>✦ ✦ ✦</span>",
 
-"it's funny, isn't it?",
-"how a simple conversation",
-"can quietly become something so important",
-"<span class='divider'>✦ ✦ ✦</span>",
+  "it's funny, isn't it?",
+  "how a simple conversation",
+  "can quietly become something so important",
+  "<span class='divider'>✦ ✦ ✦</span>",
 
-"somewhere between",
-"the late night talks",
-"the random laughs",
-"the little stories",
-"and the countless messages",
-"you became home in a way I never expected",
-"<span class='divider'>✦ ✦ ✦</span>",
+  "somewhere between",
+  "the late night talks",
+  "the random laughs",
+  "the little stories",
+  "and the countless messages",
+  "you became home in a way I never expected",
+  "<span class='divider'>✦ ✦ ✦</span>",
 
-"and your voice...",
-"I don't think you realize it",
-"but it has this warmth to it",
-"the kind that makes a bad day feel lighter",
-"and a good day feel even better",
-"<span class='divider'>✦ ✦ ✦</span>",
+  "and your voice...",
+  "I don't think you realize it",
+  "but it has this warmth to it",
+  "the kind that makes a bad day feel lighter",
+  "and a good day feel even better",
+  "<span class='divider'>✦ ✦ ✦</span>",
 
-"and your eyes...",
-"they deserve their own chapter",
-"because every time I look at them",
-"they seem to hold a thousand beautiful stories",
-"soft...",
-"kind...",
-"and impossible to forget",
-"<span class='divider'>✦ ✦ ✦</span>",
+  "and your eyes...",
+  "they deserve their own chapter",
+  "because every time I look at them",
+  "they seem to hold a thousand beautiful stories",
+  "soft...",
+  "kind...",
+  "and impossible to forget",
+  "<span class='divider'>✦ ✦ ✦</span>",
 
-"but what I admire most",
-"isn't your voice",
-"or your beautiful eyes",
-"it's your heart",
-"<span class='divider'>✦ ✦ ✦</span>",
+  "but what I admire most",
+  "isn't your voice",
+  "or your beautiful eyes",
+  "it's your heart",
+  "<span class='divider'>✦ ✦ ✦</span>",
 
-"the way you care",
-"the way you listen",
-"the way you make people feel valued",
-"without even trying",
-"<span class='divider'>✦ ✦ ✦</span>",
+  "the way you care",
+  "the way you listen",
+  "the way you make people feel valued",
+  "without even trying",
+  "<span class='divider'>✦ ✦ ✦</span>",
 
-"you have this rare ability",
-"to make ordinary moments",
-"feel special",
-"<span class='divider'>✦ ✦ ✦</span>",
+  "you have this rare ability",
+  "to make ordinary moments",
+  "feel special",
+  "<span class='divider'>✦ ✦ ✦</span>",
 
-"and honestly...",
-"that's my favorite thing about you",
-"<span class='divider'>✦ ✦ ✦</span>",
+  "and honestly...",
+  "that's my favorite thing about you",
+  "<span class='divider'>✦ ✦ ✦</span>",
 
-"so on your birthday",
-"I wish you happiness that stays",
-"memories that last",
-"dreams that come true",
-"and countless reasons to smile",
-"<span class='divider'>✦ ✦ ✦</span>",
+  "so on your birthday",
+  "I wish you happiness that stays",
+  "memories that last",
+  "dreams that come true",
+  "and countless reasons to smile",
+  "<span class='divider'>✦ ✦ ✦</span>",
 
-"because someone as wonderful as you",
-"deserves a year filled with beautiful moments",
-"<span class='divider'>✦ ✦ ✦</span>",
+  "because someone as wonderful as you",
+  "deserves a year filled with beautiful moments",
+  "<span class='divider'>✦ ✦ ✦</span>",
 
-"thank you",
-"for every conversation",
-"every laugh",
-"every memory",
-"and every moment that brought us here",
-"<span class='divider'>✦ ✦ ✦</span>",
+  "thank you",
+  "for every conversation",
+  "every laugh",
+  "every memory",
+  "and every moment that brought us here",
+  "<span class='divider'>✦ ✦ ✦</span>",
 
-"and if I could make one wish today...",
-"it would be that life always gives you",
-"the same happiness",
-"that you give to others",
-"<span class='divider'>✦ ✦ ✦</span>",
+  "and if I could make one wish today...",
+  "it would be that life always gives you",
+  "the same happiness",
+  "that you give to others",
+  "<span class='divider'>✦ ✦ ✦</span>",
 
-"once again...",
-"Happy Birthday, <span class='name'>Sam</span> 🤍",
-"you truly are unforgettable"
+  "once again...",
+  "Happy Birthday, <span class='name'>Sam</span> 🤍",
+  "you truly are unforgettable",
 ];
 
 /* ─── Helpers ──────────────────────────────────────────── */
@@ -406,14 +406,28 @@ function scatterBalloonsToEdges() {
 
 function arrangeBalloons() {
   stopBalloons();
-  const vw = window.innerWidth / 2;
-  const offsets = [-280, -170, -60, 60, 170, 280];
+  const totalWidth = window.innerWidth;
+  const center = totalWidth / 2;
+  const balloonWidth = 70; // fallback width for small screens
+  const computedBalloon = $id(BALLOON_IDS[0])?.offsetWidth || balloonWidth;
+  const spacing = Math.min(
+    120,
+    Math.max(72, (totalWidth - computedBalloon * 2) / 5),
+  );
+  const offsets = [-2.5, -1.5, -0.5, 0.5, 1.5, 2.5].map(
+    (value) => value * spacing,
+  );
+
   BALLOON_IDS.forEach((id, i) => {
     const el = $id(id);
     if (!el) return;
+    const leftPos = Math.min(
+      Math.max(center + offsets[i] - computedBalloon / 2, 12),
+      totalWidth - computedBalloon - 12,
+    );
     el.style.transition =
       "left 0.6s cubic-bezier(0.22,1,0.36,1), top 0.6s ease, bottom 0.6s ease";
-    el.style.left = vw + offsets[i] - 35 + "px";
+    el.style.left = leftPos + "px";
     el.style.top = "130px";
     el.style.bottom = "auto";
   });
@@ -724,7 +738,9 @@ window.addEventListener("load", () => {
     const flash = document.createElement("div");
     flash.style.cssText = `position:fixed;inset:0;background:radial-gradient(ellipse at center,rgba(245,200,66,0.15),transparent 70%);z-index:89;pointer-events:none;opacity:0;transition:opacity 0.4s ease;`;
     document.body.appendChild(flash);
-    requestAnimationFrame(() => { flash.style.opacity = "1"; });
+    requestAnimationFrame(() => {
+      flash.style.opacity = "1";
+    });
     setTimeout(() => {
       flash.style.opacity = "0";
       setTimeout(() => flash.remove(), 500);
@@ -885,17 +901,19 @@ window.addEventListener("load", () => {
   function animateStats() {
     const statNumbers = document.querySelectorAll(".stat-number");
     statNumbers.forEach((el) => {
-      const target = parseInt(el.getAttribute("data-target"));
+      const rawTarget = el.getAttribute("data-target") || "0";
+      const plusSuffix = rawTarget.trim().endsWith("+");
+      const target = parseInt(rawTarget, 10);
       if (isNaN(target)) return; // Skip infinite symbol
       let current = 0;
-      const increment = Math.ceil(target / 50);
+      const increment = Math.max(1, Math.ceil(target / 50));
       const interval = setInterval(() => {
         current += increment;
         if (current >= target) {
           current = target;
           clearInterval(interval);
         }
-        el.textContent = current;
+        el.textContent = `${current}${plusSuffix ? "+" : ""}`;
       }, 20);
     });
   }
