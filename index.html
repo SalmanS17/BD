@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Happy Birthday, Ridhi 🎂</title>
+    <title>Happy Birthday, Sam 🎂</title>
     <meta
       name="description"
-      content="A heartfelt birthday wish for Ridhi — made with love."
+      content="A heartfelt birthday wish for Sam — made with love."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -23,6 +23,15 @@
       <div class="loading-cake">🎂</div>
       <p class="loading-text">Preparing something special for you…</p>
     </div>
+
+    <!-- ══ FLOATING HEARTS (CSS-only ambient layer) ════════ -->
+    <div class="floating-hearts" id="floating-hearts">
+      <span>♥</span><span>♥</span><span>♥</span><span>♥</span>
+      <span>♥</span><span>♥</span><span>♥</span><span>♥</span>
+    </div>
+
+    <!-- ══ VIGNETTE OVERLAY (activated during story) ══════ -->
+    <div class="vignette-overlay" id="vignette-overlay"></div>
 
     <!-- ══ BACKGROUND IMAGE LIGHT ORBS ══════════════════════ -->
     <div class="bg-lights" id="bg-lights">
@@ -110,11 +119,9 @@
     <div class="balloons" id="b1b"><span>H</span></div>
     <div class="balloons" id="b2b"><span>B</span></div>
     <div class="balloons" id="b3b"><span>D</span></div>
-    <div class="balloons" id="b4b"><span>R</span></div>
-    <div class="balloons" id="b5b"><span>I</span></div>
-    <div class="balloons" id="b6b"><span>D</span></div>
-    <div class="balloons" id="b7b"><span>H</span></div>
-    <div class="balloons" id="b8b"><span>I</span></div>
+    <div class="balloons" id="b4b"><span>S</span></div>
+    <div class="balloons" id="b5b"><span>A</span></div>
+    <div class="balloons" id="b6b"><span>M</span></div>
 
     <!-- ══ PARTICLE EFFECTS CONTAINER ════════════════════════ -->
     <div class="particles-container" id="particles-container"></div>
@@ -134,7 +141,7 @@
         <div class="start-content">
           <div class="start-cake-emoji">🎂</div>
           <h1 class="start-title">Happy Birthday</h1>
-          <div class="start-name">Ridhi</div>
+          <div class="start-name">Sam</div>
           <p class="start-sub">A small love note, made just for you ✨</p>
           <button class="start-btn" id="start-btn">
             <span>Open your wish</span>
@@ -189,10 +196,10 @@
             </div>
           </div>
 
-          <!-- "Happy Birthday Ridhi" wish text (hidden until step 7) -->
+          <!-- "Happy Birthday Sam" wish text (hidden until step 7) -->
           <div class="wish-display" id="wish-display">
             <div class="wish-hbd">Happy Birthday</div>
-            <div class="wish-name">Ridhi 🎉</div>
+            <div class="wish-name">Sam 🎉</div>
           </div>
         </div>
 
@@ -263,7 +270,7 @@
       <div class="scene hidden" id="scene-finale">
         <div class="finale-content">
           <div class="finale-glow-text">Happy Birthday</div>
-          <div class="finale-name">Ridhi</div>
+          <div class="finale-name">Sam</div>
           <div class="finale-sub">
             🎉 Wishing you a year as lovely as you are 🎉
           </div>
@@ -286,7 +293,7 @@
             <h2 class="stats-title">✨ Your Moment in Numbers</h2>
             <div class="stats-grid">
               <div class="stat-card">
-                <div class="stat-number" data-target="365">0</div>
+                <div class="stat-number" data-target="350">0</div>
                 <div class="stat-label">Days Together</div>
               </div>
               <div class="stat-card">

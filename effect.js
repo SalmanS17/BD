@@ -8,70 +8,100 @@
    BIRTHDAY STORY — sentence by sentence
 ═══════════════════════════════════════════════════════════ */
 const STORY = [
-  "So… here we are",
-  "your special day feels like a gentle sunrise",
-  "Happy Birthday, <span class='name'>Ridhi</span> 🤍",
-  "<span class='divider'>✦ ✦ ✦</span>",
-  "I wasn’t sure how to start this",
-  "because I wanted it to feel warm",
-  "not just another birthday wish",
-  "<span class='divider'>✦ ✦ ✦</span>",
-  "it’s something soft and honest",
-  "how every moment with you feels meaningful",
-  "since we first started talking",
-  "and somehow",
-  "that first quiet conversation",
-  "still feels just as clear",
-  "<span class='divider'>✦ ✦ ✦</span>",
-  "I still remember",
-  "how easy it felt",
-  "like sitting in the calmest place",
-  "where nothing was forced",
-  "and everything felt right",
-  "<span class='divider'>✦ ✦ ✦</span>",
-  "and over time…",
-  "there were small things I noticed",
-  "the kind of details I wanted to keep",
-  "<span class='divider'>✦ ✦ ✦</span>",
-  "your voice…",
-  "it has a gentle rhythm to it",
-  "like something you could listen to",
-  "on a quiet evening",
-  "and suddenly feel at peace",
-  "it’s soft…",
-  "comforting…",
-  "and it stays with me longer than expected",
-  "<span class='divider'>✦ ✦ ✦</span>",
-  "and your eyes…",
-  "they have their own way of speaking",
-  "a softness mixed with a little spark",
-  "something tender… yet unforgettable",
-  "like they carry stories",
-  "even when you don’t say a word",
-  "<span class='divider'>✦ ✦ ✦</span>",
-  "maybe that’s why",
-  "talking to you never really feels like effort",
-  "it just feels… natural",
-  "<span class='divider'>✦ ✦ ✦</span>",
-  "so today,",
-  "I just want to wish you",
-  "<span class='glow-word'>joy</span>",
-  "<span class='glow-word'>peace</span>",
-  "and moments that make you smile",
-  "without even realizing it",
-  "<span class='divider'>✦ ✦ ✦</span>",
-  "I hope this year brings you",
-  "beautiful memories",
-  "warm surprises",
-  "and everything your heart quietly wishes for",
-  "<span class='divider'>✦ ✦ ✦</span>",
-  "so keep smiling",
-  "keep shining",
-  "and keep being exactly who you are",
-  "<span class='divider'>✦ ✦ ✦</span>",
-  "once again…",
-  "Happy Birthday, <span class='name'>Ridhi</span> 🤍",
+"turn down the noise for a moment...",
+"because today is about someone special",
+"<span class='divider'>✦ ✦ ✦</span>",
+
+"Happy Birthday, <span class='name'>Sam</span> 🤍",
+"the girl who somehow became",
+"one of my favorite parts of every day",
+"<span class='divider'>✦ ✦ ✦</span>",
+
+"a year ago",
+"you were just someone I was about to meet",
+"and now...",
+"you are someone I can't imagine not talking to",
+"<span class='divider'>✦ ✦ ✦</span>",
+
+"it's funny, isn't it?",
+"how a simple conversation",
+"can quietly become something so important",
+"<span class='divider'>✦ ✦ ✦</span>",
+
+"somewhere between",
+"the late night talks",
+"the random laughs",
+"the little stories",
+"and the countless messages",
+"you became home in a way I never expected",
+"<span class='divider'>✦ ✦ ✦</span>",
+
+"and your voice...",
+"I don't think you realize it",
+"but it has this warmth to it",
+"the kind that makes a bad day feel lighter",
+"and a good day feel even better",
+"<span class='divider'>✦ ✦ ✦</span>",
+
+"and your eyes...",
+"they deserve their own chapter",
+"because every time I look at them",
+"they seem to hold a thousand beautiful stories",
+"soft...",
+"kind...",
+"and impossible to forget",
+"<span class='divider'>✦ ✦ ✦</span>",
+
+"but what I admire most",
+"isn't your voice",
+"or your beautiful eyes",
+"it's your heart",
+"<span class='divider'>✦ ✦ ✦</span>",
+
+"the way you care",
+"the way you listen",
+"the way you make people feel valued",
+"without even trying",
+"<span class='divider'>✦ ✦ ✦</span>",
+
+"you have this rare ability",
+"to make ordinary moments",
+"feel special",
+"<span class='divider'>✦ ✦ ✦</span>",
+
+"and honestly...",
+"that's my favorite thing about you",
+"<span class='divider'>✦ ✦ ✦</span>",
+
+"so on your birthday",
+"I wish you happiness that stays",
+"memories that last",
+"dreams that come true",
+"and countless reasons to smile",
+"<span class='divider'>✦ ✦ ✦</span>",
+
+"because someone as wonderful as you",
+"deserves a year filled with beautiful moments",
+"<span class='divider'>✦ ✦ ✦</span>",
+
+"thank you",
+"for every conversation",
+"every laugh",
+"every memory",
+"and every moment that brought us here",
+"<span class='divider'>✦ ✦ ✦</span>",
+
+"and if I could make one wish today...",
+"it would be that life always gives you",
+"the same happiness",
+"that you give to others",
+"<span class='divider'>✦ ✦ ✦</span>",
+
+"once again...",
+"Happy Birthday, <span class='name'>Sam</span> 🤍",
+"you truly are unforgettable"
 ];
+
 /* ─── Helpers ──────────────────────────────────────────── */
 const $id = (id) => document.getElementById(id);
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -113,7 +143,10 @@ function createParticle(type = "heart") {
 }
 
 function spawnParticles(count = 3, type = "heart") {
-  for (let i = 0; i < count; i++) {
+  // Reduce particles on mobile for performance
+  const isMobile = window.innerWidth < 481;
+  const adjusted = isMobile ? Math.max(1, Math.floor(count / 2)) : count;
+  for (let i = 0; i < adjusted; i++) {
     setTimeout(() => createParticle(type), i * 100);
   }
 }
@@ -275,7 +308,7 @@ function floatOrb(orb, x, y, size, speed, vw, vh) {
 /* ═══════════════════════════════════════════════════════════
    CELEBRATION SCENE — BALLOON ENGINE
 ═══════════════════════════════════════════════════════════ */
-const BALLOON_IDS = ["b1b", "b2b", "b3b", "b4b", "b5b", "b6b", "b7b", "b8b"];
+const BALLOON_IDS = ["b1b", "b2b", "b3b", "b4b", "b5b", "b6b"];
 const _balloonTimers = {};
 
 function floatBalloon(id) {
@@ -311,10 +344,10 @@ function launchBalloons() {
     }, 80);
   });
   // Drift classes
-  ["b1b", "b3b", "b5b", "b7b"].forEach((id) =>
+  ["b1b", "b3b", "b5b"].forEach((id) =>
     $id(id)?.classList.add("balloons-drift-a"),
   );
-  ["b2b", "b4b", "b6b", "b8b"].forEach((id) =>
+  ["b2b", "b4b", "b6b"].forEach((id) =>
     $id(id)?.classList.add("balloons-drift-b"),
   );
   // Start float loops
@@ -334,20 +367,23 @@ function scatterBalloonsToEdges() {
   const vw = window.innerWidth;
   const vh = window.innerHeight;
   const bw = 70;
+  const isMobile = vw < 481;
 
   // Banner bottom edge ≈ 58px (top) + ~65px (banner height) + 20px gap = 143px
   // Using 165px gives a comfortable clearance so no balloon hides behind the banner.
   const BANNER_CLEAR = 165;
 
+  // On mobile, move bottom balloons higher to avoid control bar
+  const bottomOffset = isMobile ? 120 : 160;
+  const bottomCenterOffset = isMobile ? 140 : 200;
+
   const edgePositions = [
-    { left: 10, top: BANNER_CLEAR }, // top-left   — was 90, now 165
-    { left: vw / 2 - bw / 2, top: BANNER_CLEAR - 15 }, // top-center — was 60, now 150
-    { left: vw - bw - 10, top: BANNER_CLEAR }, // top-right  — was 90, now 165
-    { left: 10, top: vh / 2 - 40 }, // mid-left   (unchanged)
-    { left: vw - bw - 10, top: vh / 2 - 40 }, // mid-right  (unchanged)
-    { left: 20, top: vh - 160 }, // bot-left   (unchanged)
-    { left: vw / 2 - bw / 2, top: vh - 200 }, // bot-center (unchanged)
-    { left: vw - bw - 20, top: vh - 160 }, // bot-right  (unchanged)
+    { left: 10, top: BANNER_CLEAR }, // top-left
+    { left: vw - bw - 10, top: BANNER_CLEAR }, // top-right
+    { left: 10, top: vh / 2 - 40 }, // mid-left
+    { left: vw - bw - 10, top: vh / 2 - 40 }, // mid-right
+    { left: 20, top: vh - bottomOffset }, // bot-left
+    { left: vw - bw - 20, top: vh - bottomOffset }, // bot-right
   ];
 
   BALLOON_IDS.forEach((id, i) => {
@@ -371,7 +407,7 @@ function scatterBalloonsToEdges() {
 function arrangeBalloons() {
   stopBalloons();
   const vw = window.innerWidth / 2;
-  const offsets = [-350, -250, -160, -60, 60, 160, 250, 350];
+  const offsets = [-280, -170, -60, 60, 170, 280];
   BALLOON_IDS.forEach((id, i) => {
     const el = $id(id);
     if (!el) return;
@@ -606,6 +642,10 @@ window.addEventListener("load", () => {
     setTimeout(() => {
       if (ls) ls.style.display = "none";
     }, 950);
+    // Trigger staggered entrance of start screen elements
+    setTimeout(() => {
+      document.querySelector(".start-content")?.classList.add("revealed");
+    }, 300);
   }, 1800);
 
   // Start image orbs floating immediately
@@ -655,15 +695,17 @@ window.addEventListener("load", () => {
     revealBtn("btn-cake");
   });
 
-  // Step 5 — Cake
+  // Step 5 — Cake (with confetti burst)
   $id("btn-cake")?.addEventListener("click", async () => {
     $id("cake-wrap")?.classList.add("show");
+    startConfetti();
+    spawnParticles(5, "sparkle");
     await hideBtn("btn-cake");
     await sleep(1000);
     revealBtn("btn-candles");
   });
 
-  // Step 6 — Candles
+  // Step 6 — Candles (with warm flash)
   $id("btn-candles")?.addEventListener("click", async () => {
     const flames = document.querySelectorAll(".flame");
     flames.forEach((f, i) => {
@@ -678,6 +720,15 @@ window.addEventListener("load", () => {
         );
       }, i * 120);
     });
+    // Warm golden flash
+    const flash = document.createElement("div");
+    flash.style.cssText = `position:fixed;inset:0;background:radial-gradient(ellipse at center,rgba(245,200,66,0.15),transparent 70%);z-index:89;pointer-events:none;opacity:0;transition:opacity 0.4s ease;`;
+    document.body.appendChild(flash);
+    requestAnimationFrame(() => { flash.style.opacity = "1"; });
+    setTimeout(() => {
+      flash.style.opacity = "0";
+      setTimeout(() => flash.remove(), 500);
+    }, 800);
     await hideBtn("btn-candles");
     await sleep(800);
     revealBtn("btn-wish");
@@ -725,6 +776,16 @@ window.addEventListener("load", () => {
     // Dim string-lights subtly (story-bg handles opacity)
     const lightsEl = $id("string-lights");
     if (lightsEl) lightsEl.classList.add("story-bg");
+
+    // Activate vignette overlay for cinematic focus
+    $id("vignette-overlay")?.classList.add("active");
+
+    // Blur background orbs more during story
+    document.querySelectorAll(".light-orb").forEach((orb) => {
+      orb.style.transition = "filter 1.5s ease, opacity 1.5s ease";
+      orb.style.filter = "blur(30px) saturate(1.2) brightness(1.1)";
+      orb.style.opacity = "0.08";
+    });
 
     // Hide wish display cleanly
     const wishEl = $id("wish-display");
