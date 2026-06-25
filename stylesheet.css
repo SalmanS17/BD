@@ -506,7 +506,7 @@ body::before {
   position: relative;
   z-index: 2;
   width: 100vw;
-  height: 100vh;
+  height: calc(100vh - 80px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1952,8 +1952,7 @@ body::before {
     font-size: clamp(1rem, 2.6vw, 1.3rem);
   }
   .scene {
-    padding: 1.5rem 1rem
-      calc(clamp(90px, 16vh, 120px) + env(safe-area-inset-bottom, 0)) 1rem;
+    padding: 1.5rem 1rem 1rem 1rem;
   }
   .story-controls {
     bottom: 1.5rem;
@@ -2013,8 +2012,7 @@ body::before {
     font-size: clamp(0.9rem, 2.2vw, 1.1rem);
   }
   .scene {
-    padding: 1.2rem 0.8rem
-      calc(clamp(80px, 14vh, 100px) + env(safe-area-inset-bottom, 0)) 0.8rem;
+    padding: 1.2rem 0.8rem 1rem 0.8rem;
   }
   .ctrl-bar {
     max-height: clamp(75px, 14vh, 115px);
