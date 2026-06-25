@@ -1037,7 +1037,7 @@ body::before {
   bottom: 0;
   left: 0;
   right: 0;
-  padding: clamp(0.5rem, 1vw, 0.8rem) clamp(0.6rem, 1.2vw, 1rem) clamp(0.6rem, 1.2vw, 1rem);
+  padding: clamp(0.5rem, 1vw, 0.8rem) clamp(0.6rem, 1.2vw, 1rem) calc(clamp(0.6rem, 1.2vw, 1rem) + env(safe-area-inset-bottom, 0)) clamp(0.6rem, 1.2vw, 1rem);
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -1741,8 +1741,8 @@ body::before {
     font-size: clamp(3.5rem, 16vw, 6rem);
   }
   .ctrl-bar {
-    max-height: clamp(80px, 15vh, 130px);
-    padding: 0.5rem 0.6rem 0.6rem;
+    max-height: calc(clamp(80px, 15vh, 130px) + env(safe-area-inset-bottom, 0));
+    padding: 0.5rem 0.6rem calc(0.6rem + env(safe-area-inset-bottom, 0));
   }
   .ctrl-btn {
     font-size: clamp(0.58rem, 1.5vw, 0.68rem);
@@ -1757,7 +1757,7 @@ body::before {
     font-size: clamp(1rem, 2.6vw, 1.3rem);
   }
   .scene {
-    padding: 1.5rem 1rem clamp(90px, 16vh, 120px) 1rem;
+    padding: 1.5rem 1rem calc(clamp(90px, 16vh, 120px) + env(safe-area-inset-bottom, 0)) 1rem;
   }
   .story-controls {
     bottom: 1.5rem;
@@ -1817,7 +1817,7 @@ body::before {
     font-size: clamp(0.9rem, 2.2vw, 1.1rem);
   }
   .scene {
-    padding: 1.2rem 0.8rem clamp(80px, 14vh, 100px) 0.8rem;
+    padding: 1.2rem 0.8rem calc(clamp(80px, 14vh, 100px) + env(safe-area-inset-bottom, 0)) 0.8rem;
   }
   .ctrl-bar {
     max-height: clamp(75px, 14vh, 115px);
