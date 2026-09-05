@@ -14,7 +14,7 @@ const STORY = [
   "but straight from my heart",
   "<span class='divider'>✦ ✦ ✦</span>",
 
-  "Happy Birthday, <span class='name'>Sam</span> 🤍",
+  "Happy Birthday, <span class='name'>Emma</span> 🤍",
   "<span class='divider'>✦ ✦ ✦</span>",
 
   "you know...",
@@ -111,7 +111,7 @@ const STORY = [
   "<span class='divider'>✦ ✦ ✦</span>",
 
   "once again...",
-  "Happy Birthday, <span class='name'>Sam</span> 🤍",
+  "Happy Birthday, <span class='name'>Emma</span> 🤍",
   "thank you for being you",
 ];
 
